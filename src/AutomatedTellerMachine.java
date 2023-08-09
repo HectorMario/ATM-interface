@@ -35,6 +35,12 @@ public class AutomatedTellerMachine {
                         System.out.println("Your balance is: " +  testAcount.getBalance());
                         break;
                     case 4:
+                        System.out.println("How transfers you see: ");
+                        int quantityTransfer = scanner.nextInt();
+                        System.out.println("what money's type? ");
+                        String typeMoney = scanner.next();
+                        MovimentsGenerator moviments = new MovimentsGenerator();
+                        System.out.println(moviments.getMoviments(quantityTransfer, typeMoney));
                         break;
                     default:
                         controlWhile = false;
