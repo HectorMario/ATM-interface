@@ -1,4 +1,10 @@
+package com.htperez.atm;
+import com.htperez.bank.BankAcount;
+import com.htperez.bank.TypeAcount;
+import com.htperez.mock.MovimentsGenerator;
+
 import java.util.Scanner;
+
 public class AutomatedTellerMachine {
 
     AutomatedTellerMachine(String user, String password){

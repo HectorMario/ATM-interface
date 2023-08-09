@@ -1,3 +1,4 @@
+package com.htperez.atm;
 import java.util.Scanner;
 
 public class Interface{

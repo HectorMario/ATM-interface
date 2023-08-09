@@ -1,23 +1,24 @@
+package com.htperez.bank;
 public class BankAcount {
-    String nameClient;
-    TypeAcount typeAcount;
-    double balance;
-    final double COMMISSION = 1.2;
-    BankAcount (String nameClient, TypeAcount typeAcount, double balance){
+    public String nameClient;
+    private TypeAcount typeAcount;
+    private double balance;
+    private final double COMMISSION = 1.2;
+    public BankAcount (String nameClient, TypeAcount typeAcount, double balance){
         this.nameClient = nameClient;
         this.typeAcount = typeAcount;
         this.balance = balance;
     }
 
-    BankAcount(String nameClient , double balance){
+    public BankAcount(String nameClient , double balance){
         this(nameClient, TypeAcount.SAVINGS, balance);
     }
 
-    BankAcount(){
+    public BankAcount(){
         this("", TypeAcount.SAVINGS, 0);
     }
 
-    void withdrawMoney(double quantity){
+    public void withdrawMoney(double quantity){
         if (quantity < 0){
             return;
         }
@@ -26,22 +27,22 @@ public class BankAcount {
         balance -= commission;
     }
 
-    void putMoney(double quantity){
+    public void putMoney(double quantity){
         if (quantity < 0 ){
             return;
         }
         balance += quantity;
     }
 
-    void changeTypeCount(TypeAcount typeAcount){
+    public void changeTypeCount(TypeAcount typeAcount){
         this.typeAcount = typeAcount;
     }
 
-    double getBalance(){
+    public double getBalance(){
         return balance;
     }
 
-    double getComision(){
+    private double getComision(){
         switch (typeAcount){
             case SAVINGS :
                 return COMMISSION;
